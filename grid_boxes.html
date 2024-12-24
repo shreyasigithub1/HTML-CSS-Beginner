@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid website layout</title>
+    <style>
+      .container {
+        height: 90vh;
+        width: 80vw;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 100px 1fr 30px;
+        grid-template-areas: "head head" "nav main" "nav foot";
+      }
+      #header {
+        grid-area:head;
+        background-color: lightblue;
+      }
+      #navbar {
+        grid-area:nav;
+        background-color: lightgreen;
+      }
+      #main {
+        grid-area:main;
+        background-color: lightpink;
+      }
+      #footer {
+        grid-area:foot;
+        background-color: lightslategray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="divisions" id="header">Header</div>
+      <div class="divisions" id="navbar">Nav Bar</div>
+      <div class="divisions" id="main">Main Section</div>
+      <div class="divisions" id="footer">Footer</div>
+    </div>
+  </body>
+</html>
+
+
